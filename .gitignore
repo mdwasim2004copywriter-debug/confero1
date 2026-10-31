@@ -1,0 +1,30 @@
+# Root-level safety net -- backend/.gitignore and frontend/.gitignore already
+# cover most of this inside their own folders, this catches anything at the
+# project root or anywhere git's default recursive matching might otherwise miss.
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.env
+.env.*
+!.env.example
+
+# Node / frontend build output
+node_modules/
+dist/
+.vercel/
+
+# Local data that must never be committed
+*.db
+backend/output/
+backend/bench/results/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Dev logs and Vite's auto-generated temp config files -- noise, not source
+*.log
+vite.config.js.timestamp-*.mjs

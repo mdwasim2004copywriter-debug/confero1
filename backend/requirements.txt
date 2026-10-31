@@ -1,0 +1,104 @@
+# Generated from the actual working venv (pip freeze) so a fresh install,
+# including on a hosting platform's build server, matches exactly what
+# runs locally. The previous version of this file listed pyannote.audio,
+# which is no longer used: speaker separation is resemblyzer + clustering
+# (see speaker_id.py) and needs no Hugging Face token or gated model.
+#
+# Note: you also need ffmpeg installed on the system (not a pip package).
+#   Windows:  winget install ffmpeg   (or download from ffmpeg.org and add to PATH)
+#   Mac:      brew install ffmpeg
+#   Linux:    sudo apt install ffmpeg
+#
+# GEMINI_API_KEY and GROQ_API_KEY are both optional, used for higher-quality
+# notes if set (tried before ANTHROPIC_API_KEY, see notes_generator.py).
+# All three are optional, the app works fully offline with none set.
+#
+# torch is pinned to the +cpu build (installed via the extra index url in
+# the Dockerfile), this app never uses a GPU, and the default PyPI torch
+# wheel bundles CUDA binaries that roughly double the image size and RAM
+# footprint for nothing. Same torch version, same behavior, smaller image.
+
+annotated-doc==0.0.5
+annotated-types==0.8.0
+anthropic==1.0.0
+anyio==4.14.2
+audioread==3.1.0
+av==18.1.0
+bcrypt==5.0.0
+certifi==2026.7.22
+cffi==2.1.1
+charset-normalizer==3.5.1
+click==8.4.2
+colorama==0.4.6
+ctranslate2==4.8.1
+decorator==5.3.1
+docstring_parser==0.18.0
+fastapi==0.141.1
+faster-whisper==1.2.1
+filelock==3.32.3
+flatbuffers==25.12.19
+fsspec==2026.7.0
+google-genai==2.25.0
+groq==1.7.0
+h11==0.16.0
+hf-xet==1.6.0
+httpcore==1.0.9
+httpcore2==2.12.0
+httpx==0.28.1
+httpx2==2.12.0
+huggingface_hub==1.28.0
+idna==3.19
+Jinja2==3.1.6
+jiter==0.16.0
+joblib==1.5.3
+lazy-loader==0.5
+librosa==0.11.0
+llvmlite==0.49.0
+markdown-it-py==4.2.0
+MarkupSafe==3.0.3
+mdurl==0.1.2
+mpmath==1.3.0
+msgpack==1.2.1
+narwhals==2.25.0
+networkx==3.6.1
+numba==0.67.0
+numpy==2.4.6
+onnxruntime==1.29.0
+packaging==26.3
+platformdirs==4.11.3
+pooch==1.9.0
+protobuf==7.36.0
+psycopg[binary]==3.2.3
+pycparser==3.0
+pydantic==2.13.4
+pydantic_core==2.46.4
+Pygments==2.21.0
+PyJWT==2.13.0
+python-dotenv==1.2.3
+python-multipart==0.0.32
+PyYAML==6.0.3
+regex==2026.7.19
+requests==2.34.2
+Resemblyzer==0.1.4
+rich==15.0.0
+safetensors==0.8.0
+scikit-learn==1.9.0
+scipy==1.17.1
+shellingham==1.5.4
+sniffio==1.3.1
+sounddevice==0.5.6
+soundfile==0.14.0
+soxr==1.1.0
+starlette==1.6.0
+sympy==1.14.0
+threadpoolctl==3.6.0
+tokenizers==0.22.2
+torch==2.13.0+cpu
+tqdm==4.70.0
+truststore==0.10.4
+typer==0.27.1
+typing-inspection==0.4.4
+typing_extensions==4.16.0
+urllib3==2.7.0
+uvicorn==0.52.4
+webrtcvad-wheels==2.0.14
